@@ -7,10 +7,12 @@
     {
         public override void Up()
         {
+            AlterColumn("dbo.Courses", "CategoryID", c => c.Byte(nullable: false));
         }
         
         public override void Down()
         {
+            AlterColumn("dbo.Courses", "CategoryID", c => c.String(nullable: false));
         }
     }
 }

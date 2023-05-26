@@ -19,6 +19,6 @@ namespace Lab3.Models
         public byte Category { get; set; }
 
         [Required]
-        public string CategoryID { get; set; }
+        public Byte CategoryID { get; set; }
     }
 }

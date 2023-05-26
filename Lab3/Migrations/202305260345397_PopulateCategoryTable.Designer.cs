@@ -13,7 +13,7 @@ namespace Lab3.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202305250315008_PopulateCategoryTable"; }
+            get { return "202305260345397_PopulateCategoryTable"; }
         }
         
         string IMigrationMetadata.Source

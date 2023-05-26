@@ -1,5 +1,6 @@
 ﻿using Lab3.Models;
 using Lab3.ViewModels;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,14 +16,46 @@ namespace Lab3.Controllers
         {
             _dbContext = new ApplicationDbContext();
         }
-        // GET: Courses
+        [Authorize]
         public ActionResult Create()
         {
             var viewModel = new CourseViewModel
             {
-                Categories = _dbContext.Categories.ToList(),
+                Categories = _dbContext.Categories.ToList()
             };
-            return View();
+            return View(viewModel);
+        }
+        // GET: Courses
+        [Authorize]
+        [HttpPost]
+        public ActionResult Create(CourseViewModel viewModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                viewModel.Categories = _dbContext.Categories.ToList();  
+                return View("Create", viewModel);
+            }
+            var course = new Course
+            {
+                LectureID = User.Identity.GetUserId(),
+                Datetime = viewModel.GetDateTime(),
+                CategoryID = viewModel.Category,
+                Place = viewModel.Place
+            };
+            _dbContext.Courses.Add(course);
+            _dbContext.SaveChanges();
+            return RedirectToAction("Index", "Home");
         }
     }
+
 }
+
+
+
+
+
+
+
+
+
+

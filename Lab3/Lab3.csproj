@@ -183,9 +183,9 @@
     <Compile Include="Migrations\202305250312300_CreateTableCourse.designer.cs">
       <DependentUpon>202305250312300_CreateTableCourse.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202305250315008_PopulateCategoryTable.cs" />
-    <Compile Include="Migrations\202305250315008_PopulateCategoryTable.designer.cs">
-      <DependentUpon>202305250315008_PopulateCategoryTable.cs</DependentUpon>
+    <Compile Include="Migrations\202305260345397_PopulateCategoryTable.cs" />
+    <Compile Include="Migrations\202305260345397_PopulateCategoryTable.designer.cs">
+      <DependentUpon>202305260345397_PopulateCategoryTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -196,6 +196,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\CourseViewModel.cs" />
+    <Compile Include="ViewModels\FutureDate.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-grid.css" />
@@ -307,8 +308,8 @@
     <EmbeddedResource Include="Migrations\202305250312300_CreateTableCourse.resx">
       <DependentUpon>202305250312300_CreateTableCourse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202305250315008_PopulateCategoryTable.resx">
-      <DependentUpon>202305250315008_PopulateCategoryTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202305260345397_PopulateCategoryTable.resx">
+      <DependentUpon>202305260345397_PopulateCategoryTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

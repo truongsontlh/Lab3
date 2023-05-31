@@ -11,14 +11,14 @@ namespace Lab3.Models
         public int Id { get; set; }
         public ApplicationUser Lecture { get; set; }
         [Required]
-        public string LectureID { get; set; }
+        public string LectureId { get; set; }
         [Required]
         [StringLength(255)]
         public string Place { get; set; }
-        public DateTime Datetime { get; set; }
+        public DateTime DateTime { get; set; }
         public byte Category { get; set; }
 
         [Required]
-        public Byte CategoryID { get; set; }
+        public Byte CategoryId { get; set; }
     }
 }

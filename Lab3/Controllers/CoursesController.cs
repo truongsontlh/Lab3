@@ -28,6 +28,8 @@ namespace Lab3.Controllers
         // GET: Courses
         [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken]
+
         public ActionResult Create(CourseViewModel viewModel)
         {
             if (!ModelState.IsValid)
@@ -37,13 +39,14 @@ namespace Lab3.Controllers
             }
             var course = new Course
             {
-                LectureID = User.Identity.GetUserId(),
-                Datetime = viewModel.GetDateTime(),
-                CategoryID = viewModel.Category,
-                Place = viewModel.Place
+                LectureId = User.Identity.GetUserId(),
+                DateTime = viewModel.GetDateTime(),
+                CategoryId = viewModel.Category,
+                Place = viewModel.Place,
             };
             _dbContext.Courses.Add(course);
             _dbContext.SaveChanges();
+
             return RedirectToAction("Index", "Home");
         }
     }

@@ -39,7 +39,7 @@ namespace Lab3.Controllers
             }
             var course = new Course
             {
-                LectureId = User.Identity.GetUserId(),
+                LecturerId = User.Identity.GetUserId(),
                 DateTime = viewModel.GetDateTime(),
                 CategoryId = viewModel.Category,
                 Place = viewModel.Place,

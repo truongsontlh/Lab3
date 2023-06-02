@@ -18,7 +18,7 @@ namespace Lab3.Controllers
         public ActionResult Index()
         {
             var upcommingCourses = _dbContext.Courses
-                .Include(c => c.Lecture)
+                .Include(c => c.Lecturer)
                 .Include(c => c.Category)
                 .Where(c => c.DateTime > DateTime.Now);
             return View(upcommingCourses);

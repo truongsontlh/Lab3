@@ -1,6 +1,6 @@
 ﻿.navbar-inverse{
-    background-color:brown;
-    border-color:antiquewhite;
+    background-color:brown !important;
+   
 }
 .navbar-inverse .navbar-nav > li > a{
     color:aliceblue;

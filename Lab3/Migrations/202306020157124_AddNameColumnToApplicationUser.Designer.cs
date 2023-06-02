@@ -7,13 +7,13 @@ namespace Lab3.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class CreateTableCourse12 : IMigrationMetadata
+    public sealed partial class AddNameColumnToApplicationUser : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(CreateTableCourse12));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddNameColumnToApplicationUser));
         
         string IMigrationMetadata.Id
         {
-            get { return "202305300656388_CreateTableCourse12"; }
+            get { return "202306020157124_AddNameColumnToApplicationUser"; }
         }
         
         string IMigrationMetadata.Source

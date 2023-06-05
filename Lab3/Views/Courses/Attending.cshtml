@@ -1,9 +1,8 @@
-﻿@model Lab3.ViewModels.CoursesViewModel 
+﻿@model Lab3.ViewModels.CoursesViewModel
 @{
-    ViewBag.Title = "Attending";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Home Page";
 }
-<h2>Attending</h2>
+
 <ul class="course">
     @foreach (var course in Model.UpcommingCourses)
     {
@@ -38,7 +37,8 @@
 </ul>
 @section scripts
 {
-    <script>$(document).ready(function () {
+    <script>
+    $(document).ready(function () {
             $(".js-toggle-attendance").click(function (e) {
                 var button = $(e.target);
                 $.post("/api/attendances", { courseId: button.attr("data-course-id") })
@@ -64,4 +64,4 @@
                     });
             });
         });</script>
-    }
+}
